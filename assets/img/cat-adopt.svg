@@ -1,0 +1,15 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="600" rx="60" fill="#FFF7EC"/>
+<rect x="420" y="110" width="230" height="300" rx="30" fill="#FFFFFF" stroke="#E5D2BD" stroke-width="8"/>
+<path d="M205 228L172 128L270 206H332L430 128L397 228" fill="#FFB36E" stroke="#8B4B20" stroke-width="14" stroke-linejoin="round"/>
+<ellipse cx="300" cy="330" rx="160" ry="148" fill="#F9A55E" stroke="#8B4B20" stroke-width="14"/>
+<circle cx="243" cy="311" r="16" fill="#2F221D"/>
+<circle cx="357" cy="311" r="16" fill="#2F221D"/>
+<path d="M300 336V390" stroke="#2F221D" stroke-width="12" stroke-linecap="round"/>
+<path d="M260 418C274 434 287.333 442 300 442C312.667 442 326 434 340 418" stroke="#2F221D" stroke-width="12" stroke-linecap="round"/>
+<path d="M476 168H594" stroke="#D5AF86" stroke-width="14" stroke-linecap="round"/>
+<path d="M476 218H594" stroke="#D5AF86" stroke-width="14" stroke-linecap="round"/>
+<path d="M476 268H560" stroke="#D5AF86" stroke-width="14" stroke-linecap="round"/>
+<path d="M472 462C521.706 462 562 421.706 562 372C562 322.294 521.706 282 472 282C422.294 282 382 322.294 382 372C382 421.706 422.294 462 472 462Z" fill="#FFDFC2" fill-opacity="0.55"/>
+<path d="M470 332L488 368L530 374L500 404L508 446L470 426L432 446L440 404L410 374L452 368L470 332Z" fill="#F19243"/>
+</svg>
