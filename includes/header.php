@@ -9,6 +9,7 @@ $current = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if (!empty($baseHref)): ?><base href="<?php echo htmlspecialchars($baseHref, ENT_QUOTES, 'UTF-8'); ?>"><?php endif; ?>
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="Rozbudowana strona o kotach zgodna z XAMPP: adopcje, blog, galeria, sklep i panel opinii.">
     <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.dataset.theme=t}}catch(e){}})();</script>
