@@ -11,6 +11,7 @@ $current = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="Rozbudowana strona o kotach zgodna z XAMPP: adopcje, blog, galeria, sklep i panel opinii.">
+    <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.dataset.theme=t}}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -39,7 +40,10 @@ $current = basename($_SERVER['PHP_SELF']);
             </span>
         </a>
 
-        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <div style="display:flex;align-items:center;gap:10px;">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Przełącz motyw" aria-pressed="false">🌙</button>
+            <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        </div>
 
         <nav class="primary-nav" id="primaryNav" aria-label="Główna nawigacja">
             <a href="index.php" class="<?php echo $current === 'index.php' ? 'active' : ''; ?>">Start</a>

@@ -16,6 +16,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const themeToggle = document.getElementById('themeToggle');
+  const applyThemeState = () => {
+    const explicit = document.documentElement.dataset.theme;
+    const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const dark = explicit ? explicit === 'dark' : systemDark;
+    if (themeToggle) {
+      themeToggle.textContent = dark ? '☀️' : '🌙';
+      themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      themeToggle.setAttribute('aria-label', dark ? 'Włącz jasny motyw' : 'Włącz ciemny motyw');
+      themeToggle.title = dark ? 'Jasny motyw' : 'Ciemny motyw';
+    }
+  };
+  applyThemeState();
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const explicit = document.documentElement.dataset.theme;
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const dark = explicit ? explicit === 'dark' : systemDark;
+      const next = dark ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      applyThemeState();
+    });
+  }
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const onChange = () => { if (!localStorage.getItem('theme')) applyThemeState(); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
+
   const searchInput = document.getElementById('catSearch');
   const statusFilter = document.getElementById('statusFilter');
   const items = document.querySelectorAll('.cat-item');
