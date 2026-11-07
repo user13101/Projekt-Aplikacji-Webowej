@@ -42,6 +42,7 @@ $current = basename($_SERVER['PHP_SELF']);
         </a>
 
         <div style="display:flex;align-items:center;gap:10px;">
+            <a class="theme-toggle" href="favorites.php" aria-label="Polubione" title="Polubione">❤</a>
             <button class="theme-toggle" id="themeToggle" type="button" aria-label="Przełącz motyw" aria-pressed="false">🌙</button>
             <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
         </div>
@@ -57,3 +58,4 @@ $current = basename($_SERVER['PHP_SELF']);
     </div>
 </header>
 <main id="main-content">
+
